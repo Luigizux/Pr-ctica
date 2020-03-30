@@ -343,17 +343,17 @@
   <p>Here are some links to help you get started:</p>
 
   <div class="card-container">
-    <form (submit)="Operacion(1, 2, 3)">
+    <form (submit)="Operacion(Operatoria, Nro1, Nro2)">
       <p>
         Seleccione operación a realizar:
         <br>
-        <input type="radio" name="Operacion" #Operatoria value=1 > Suma
+        <input type="radio" name="Operacion" #Operatoria value="1" > Suma
         <br>
-        <input type="radio" name="Operacion" #Operatoria value='2'> Resta
+        <input type="radio" name="Operacion" #Operatoria value="2"> Resta
         <br>
-        <input type="radio" name="Operacion" #Operatoria value='3' > Multiplicación
+        <input type="radio" name="Operacion" #Operatoria value="3" > Multiplicación
         <br>
-        <input type="radio" name="Operacion" #Operatoria value='4' > División
+        <input type="radio" name="Operacion" #Operatoria value="4" > División
         <br>
         Ingrese los números:
         <br><br>

@@ -17,23 +17,26 @@ export class AppComponent {
     3.- Multiplicaión
     4.- División
     */
-    switch (Operatoria.Value) {
-      case 1:         
-          this.Resultado = (Nro1.Value + Nro2.Value);
+   var PrimerNumero = Number(Nro1.value);
+   var SegundoNumero = Number(Nro2.value);
+  
+   console.log(Operatoria.value);
+          console.log(PrimerNumero);
+          console.log(SegundoNumero);
+    switch (Operatoria.value) {
+      case "1":         
+          this.Resultado = (PrimerNumero + SegundoNumero);
         break;
-      case 2:
-          this.Resultado = (Nro1.Value - Nro2.Value);
+      case "2":
+          this.Resultado = (PrimerNumero - SegundoNumero);
         break;
-      case 3:
-          this.Resultado = (Nro1.Value * Nro2.Value);
+      case "3":
+          this.Resultado = (PrimerNumero * SegundoNumero);
         break;
-      case 4:
-          this.Resultado = (Nro1.Value / Nro2.Value);
+      case "4":
+          this.Resultado = (PrimerNumero / SegundoNumero);
         break;
       default:
-          console.log(Operatoria.Value);
-          console.log(Nro1.Value);
-          console.log(Nro2.Value);
           alert("Escoja una operación válida");
         break;
     }
