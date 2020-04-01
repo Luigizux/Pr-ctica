@@ -17,13 +17,18 @@ export class AppComponent {
     3.- Multiplicaión
     4.- División
     */
+   
    var PrimerNumero = Number(Nro1.value);
    var SegundoNumero = Number(Nro2.value);
   
-   console.log(Operatoria.value);
-          console.log(PrimerNumero);
-          console.log(SegundoNumero);
-    switch (Operatoria.value) {
+   if(isNaN(PrimerNumero) || isNaN(SegundoNumero)) // Validar que solo se ingrsen daton numéricos.
+   {
+      alert("Asigne solo números por favor");
+   }
+   else
+   {
+    switch (Operatoria.value) 
+    {
       case "1":         
           this.Resultado = (PrimerNumero + SegundoNumero);
         break;
@@ -40,6 +45,11 @@ export class AppComponent {
           alert("Escoja una operación válida");
         break;
     }
+   }
+    /*console.log(Operatoria.value);
+    console.log(PrimerNumero);
+    console.log(SegundoNumero);
+    */
    return false;
   }
 }
