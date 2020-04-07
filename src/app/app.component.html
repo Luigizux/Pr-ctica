@@ -336,18 +336,35 @@
   </div>
 
   <div class="card-container">
+    <form>
+      <p>
+        <label for="Operatoria"> Seleccione operación a realizar:  </label>
+        <br>
+        <select id="Operatoria" name="Operatoria" [(ngModel)]="Operatoria">
+          <option value="1"> Suma </option>
+          <option value="2"> Resta </option>
+          <option value="3"> Multiplicación </option>
+          <option value="4"> División </option>
+        </select> 
+        <br><br>
+
+        <input type="number" name="Nro1" [(ngModel)]="Nro1">
+        <br><br>
+        <input type="number" name="Nro2" [(ngModel)]="Nro2">
+        <br><br>
+        Operatoria: {{ Operatoria }}
+        <br><br>
+        Nro1: {{ Nro1 }}
+        <br>
+        Nro2: {{ Nro2 }}
+        <br>
+        Resultado: {{ Resultado }}
+      </p>
+    </form>
+<!--
     <form (submit)="Operacion(Operatoria, Nro1, Nro2)">
       <p>
         <br>
-        <!-- 
-        <input type="radio" name="Operacion" #Operatoria value="1" > Suma
-        <br>
-        <input type="radio" name="Operacion" #Operatoria value="2"> Resta
-        <br>
-        <input type="radio" name="Operacion" #Operatoria value="3" > Multiplicación
-        <br>
-        <input type="radio" name="Operacion" #Operatoria value="4" > División
-        -->
         <label for="Operatoria"> Seleccione operación a realizar:  </label>
         <select #Operatoria id="Operatoria">
           <option value="1"> Suma </option>
@@ -364,11 +381,14 @@
         <br><br>
         <button>Calcular</button>
       </p>
-      
+      <p>
+
+      </p>
       
       <br><br>
       Resultado: {{ Resultado }}
     </form>
+  -->
   </div>
 
   <!-- Footer -->
